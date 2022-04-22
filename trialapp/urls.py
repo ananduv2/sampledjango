@@ -19,6 +19,8 @@ from data.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',ListContact.as_view(), name='index'),
+    path('login/',Login.as_view(), name='login'),
+    path('logout/',Logout.as_view(), name='logout'),
     path('add/',AddContact.as_view(), name='add'),
     path('edit/<id>/',EditContact.as_view(), name='edit'),
     path('delete/<id>/',DeleteContact.as_view(), name='delete'),
